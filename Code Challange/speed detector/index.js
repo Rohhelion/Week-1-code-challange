@@ -1,4 +1,4 @@
-function checkSpeed(speeed){
+function checkSpeed(speed){
     const speedlimit = 70
     const points = 5
     const pointsthreshhold = 12

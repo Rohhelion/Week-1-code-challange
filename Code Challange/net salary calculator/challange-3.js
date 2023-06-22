@@ -61,18 +61,18 @@ function calculateDeduction(salary) {
 }
 //calculating net salary
   function calculateNetSalary(salary, benefits){
-  var monthlyTxablePay = salary
-  var deductTax = calculateTaxRates(monthlyTxablePay)
-  var grossPay = salary - (( deductTax / 100) * salary)
-  var deductNhif = calculateDeduction(salary)
-  var pay = salary - ((deductTax / 100) / salary) -deductNhif
-  var deductNssf = calculatePensionablePayTier(pay)
-  var netSalaryCalculation = () =>{var netSalaryValue = (pay - deductNhif) ; return netSalaryValue}
-  var netSalary = netSalaryCalculation()
+  let monthlyTaxablePay = salary
+  let deductTax = calculateTaxRates(monthlyTaxablePay)
+  let grossPay = salary - (( deductTax / 100) * salary)
+  let deductNhif = calculateDeduction(salary)
+  let pay = salary - ((deductTax / 100) / salary) -deductNhif
+  let deductNssf = calculatePensionablePayTier(pay)
+  let netSalaryCalculation = () =>{let netSalaryValue = (pay - deductNhif) ; return netSalaryValue}
+  let netSalary = netSalaryCalculation()
   console.log(netSalary)
   return netSalary   
   }
 
-var salary = parseInt("7000")
-var benefits = parseInt("800")
+let salary = parseInt("7000")
+let benefits = parseInt("800")
 calculateNetSalary(salary, benefits)
